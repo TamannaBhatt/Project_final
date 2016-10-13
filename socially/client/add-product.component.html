@@ -1,0 +1,18 @@
+
+    <h2>MyFollow</h2>
+    <form [formGroup]="addForm" (ngSubmit)="addProduct()">
+        <h3>Add Product</h3>
+  <label>Product Name</label>
+  <input type="text"  formControlName="productName">
+  <br>
+  <br>
+ 
+  <label>Product Description</label>
+  <input type="text"  formControlName="productDescription">
+  <br>
+  <br>
+  <br>
+   <button type="submit">Add</button>
+  <br>
+</form>
+  

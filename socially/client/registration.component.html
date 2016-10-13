@@ -1,0 +1,55 @@
+  <h2>REGISTRATION</h2>
+      <lable>Name:</lable>
+          <input type="text">
+      <br>
+      <br>
+      <lable>Email:</lable>
+        <input type="email" [(ngModel)]="user.email">
+      <br>
+      <br>
+       <label>Password</label>
+        <input type="password"  [(ngModel)]="user.password">
+      <br>
+      <br>
+      <lable>Company Name:</lable>
+        <input type="text" [(ngModel)]="profile.name" >
+      <br>
+      <br>
+      <lable>Description:</lable>
+       <textarea [(ngModel)]="profile.description"></textarea>
+      <br>
+      <br>
+      <lable>Date OF Joining:</lable>
+        <input type="date" [(ngModel)]="profile.dateOfJoining">
+      <br>
+      <br>
+      <lable>Founded In:</lable>
+       <input type="date" [(ngModel)]="profile.foundedIn">
+      <br>
+      <br>
+      <lable>Address</lable>
+      <br>
+      <label>Street 1:</label>
+       <input type="text" [(ngModel)]="profile.street1">
+      <br>
+      <br>
+      <label>Street 2:</label>
+        <input type="text" [(ngModel)]="profile.street2">
+      <br>
+      <br>
+      <label>State:</label>
+       <input type="text" [(ngModel)]="profile.state">
+      <br>
+      <br>
+      <label>Country:</label>
+        <input type="text" [(ngModel)]="profile.country">
+      <br>
+      <br>
+      <button (click)="submit()"> Submit</button>
+  
+      
+
+
+      
+
+      
