@@ -14,25 +14,18 @@ export class UpdateProductComponent implements OnInit {
   productId: string;
   productName:Mongo.Cursor<any>;
   updateForm: FormGroup;
- // products:Mongo.Cursor<any>;
+
    public product: Product = new Product();
 
   constructor(private formBuilder: FormBuilder, private router: Router, private route: ActivatedRoute) {
-    //this.products = myfollow.find();
-   // this.productName=myfollow.find({productName:this.productName});
-    //console.log(this.productName);
-   // this.product.productName='productDescription';
    
-    // this.productName= myfollow.find(productName:this.productName);
-      //console.log(this.productName);
-    
   }
 
   ngOnInit() {
-    // console.log(this.products);
+   
     this.sub = this.route.params.subscribe(params => {
       this.productId = params['id'];
-     // this.productName=params['productName'];
+    
     });
     this.updateForm = this.formBuilder.group({
     
