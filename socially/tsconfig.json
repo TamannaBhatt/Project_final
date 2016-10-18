@@ -1,17 +1,40 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "isolatedModules": false,
-    "moduleResolution": "node",
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "removeComments": false,
+    "module": "commonjs",
+    "target": "es5",
     "noImplicitAny": false,
-    "sourceMap": true
+    "suppressImplicitAnyIndexErrors": true,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "sourceMap": false,
+    "declaration": true,
+    "noEmitHelpers": true,    
+    "lib": ["es2015", "dom"],
+    "skipLibCheck": true
   },
-  "exclude": [
-    "node_modules"
+  "files": [    
+    "server/imports/fixtures//myfollow.ts",
+    "server/imports/fixtures//states.ts",
+    "server/main.ts",
+    "client/add-product.component.ts",
+    "client/imports/app//app.component.ts",
+    "client/app.routes.ts",
+    "client/first.component.ts",
+    "client/init.test.ts",
+    "client/login.component.ts",
+    "client/main.ts",
+    "client/product-list.component.ts",
+    "client/registration.component.ts",
+    "client/update-product.component.ts",
+    "client/user.model.ts",
+    "both/collections/myfollow.collection.ts",
+    "both/collections/states.collection.ts",
+    "typings/index.d.ts"
   ],
-  "compileOnSave": false
+  "exclude": [
+    "examples",
+    "node_modules",
+    "atmosphere-packages"
+  ]
 }

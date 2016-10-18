@@ -12,23 +12,19 @@ import {Product} from './product.model';
 export class UpdateProductComponent implements OnInit {
   sub: any;
   productId: string;
-  productName:Mongo.Cursor<any>;
+  productName: Mongo.Cursor<any>;
   updateForm: FormGroup;
-
-   public product: Product = new Product();
+  public product: Product = new Product();
 
   constructor(private formBuilder: FormBuilder, private router: Router, private route: ActivatedRoute) {
-   
-  }
 
-  ngOnInit() {
-   
+  }
+ ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
       this.productId = params['id'];
-    
+
     });
     this.updateForm = this.formBuilder.group({
-    
       productName: ['', Validators.required],
       productDescription: []
     });
