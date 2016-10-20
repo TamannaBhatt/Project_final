@@ -19,6 +19,7 @@
     "server/main.ts",
     "client/add-product.component.ts",
     "client/imports/app//app.component.ts",
+    "client/imports/app//app.module.ts",
     "client/app.routes.ts",
     "client/first.component.ts",
     "client/init.test.ts",

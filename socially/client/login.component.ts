@@ -4,7 +4,7 @@ import template from './login.component.html';
 import {User} from './user.model';
 @Component({
     template,
-    directives: [ROUTER_DIRECTIVES]
+    //directives: [ROUTER_DIRECTIVES]
 })
 export class LoginComponent {
     user: any;

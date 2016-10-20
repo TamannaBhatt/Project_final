@@ -4,7 +4,7 @@ import template from './registration.component.html';
 import {User,Profile} from './user.model';
 @Component({
      template,
-    directives: [ROUTER_DIRECTIVES]
+   // directives: [ROUTER_DIRECTIVES]
 })
 export class RegistrationComponent{ 
     public user: User = new User();

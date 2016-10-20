@@ -7,7 +7,7 @@ import {Product} from './product.model';
 
 @Component({
   template,
-  directives: [ROUTER_DIRECTIVES, REACTIVE_FORM_DIRECTIVES]
+ // directives: [ROUTER_DIRECTIVES, REACTIVE_FORM_DIRECTIVES]
 })
 export class UpdateProductComponent implements OnInit {
   sub: any;

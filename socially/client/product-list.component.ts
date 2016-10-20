@@ -7,7 +7,7 @@ import { state } from '../both/collections/states.collection';
  
 @Component({
   template,
-  directives: [ROUTER_DIRECTIVES, AddProductComponent]
+  //directives: [ROUTER_DIRECTIVES, AddProductComponent]
 })
 export class ProductListComponent implements OnInit {
   myfollows: Mongo.Cursor<any>;

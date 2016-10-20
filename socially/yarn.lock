@@ -20,9 +20,9 @@
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-2.0.0.tgz#7f8603be42511d3133e95888a1b5c5132fc89c46"
 
-"@angular/router@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@angular/router/-/router-3.0.0.tgz#cdf91b3a5d85ad39aff4fd882455c9b8c3129cd9"
+"@angular/router@3.0.0-alpha.7":
+  version "3.0.0-alpha.7"
+  resolved "https://registry.yarnpkg.com/@angular/router/-/router-3.0.0-alpha.7.tgz#0c869c925f000677ff502db54b0000df84ad4718"
 
 abbrev@1:
   version "1.0.9"

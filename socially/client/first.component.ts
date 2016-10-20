@@ -6,7 +6,7 @@ import template from './first.component.html';
 @Component({
     
     template,
-    directives: [ROUTER_DIRECTIVES]
+   // directives: [ROUTER_DIRECTIVES]
 })
 export class FirstComponent 
 {

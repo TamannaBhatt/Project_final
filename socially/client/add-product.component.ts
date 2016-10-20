@@ -1,14 +1,13 @@
 import { Component, OnInit} from '@angular/core';
 import { REACTIVE_FORM_DIRECTIVES, FormGroup, FormBuilder,Validators  } from '@angular/forms';
-
-  import{  ROUTER_DIRECTIVES,Router } from '@angular/router';
-  import template from './add-product.component.html';
-  import { myfollow } from '../both/collections/myfollow.collection';
+import{  ROUTER_DIRECTIVES,Router } from '@angular/router';
+import template from './add-product.component.html';
+import { myfollow } from '../both/collections/myfollow.collection';
 
 @Component({
   
     template,
-    directives: [ROUTER_DIRECTIVES,REACTIVE_FORM_DIRECTIVES]
+    //directives: [ROUTER_DIRECTIVES,REACTIVE_FORM_DIRECTIVES]
 })
 export class AddProductComponent implements OnInit
 {
