@@ -11,3 +11,4 @@ var Profile = (function () {
     return Profile;
 }());
 exports.Profile = Profile;
+//# sourceMappingURL=user.model.js.map

@@ -1,12 +1,12 @@
 import { state } from '../../../both/collections/states.collection';
 
 Meteor.methods({
-    'removeProductId': function(productId){
+    'removeProductsIdssss': function(productId){
       state.remove({ productId: productId, userId: Meteor.userId() });
      
     },
     
-    'insertProductId':function(productId){
+    'insertProductsIdssss':function(productId){
       state.insert({ productId: productId, userId: Meteor.userId() });
      
     },

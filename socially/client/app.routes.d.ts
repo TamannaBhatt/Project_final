@@ -1,1 +1,1 @@
-export declare const APP_ROUTER_PROVIDERS: any[][];
+export declare const APP_ROUTER_PROVIDERS: any[];

@@ -1,8 +1,8 @@
 import { Component, OnInit} from '@angular/core';
-import { REACTIVE_FORM_DIRECTIVES, FormGroup, FormBuilder,Validators  } from '@angular/forms';
-import{  ROUTER_DIRECTIVES,Router } from '@angular/router';
+import { FormGroup, FormBuilder,Validators  } from '@angular/forms';
+import{Router} from '@angular/router';
 import template from './add-product.component.html';
-import { myfollow } from '../both/collections/myfollow.collection';
+import { myfollowApp } from '../both/collections/myfollow.collection';
 
 @Component({
   
@@ -27,7 +27,7 @@ export class AddProductComponent implements OnInit
  
   addProduct() {
     if (this.addForm.valid) {
-      myfollow.insert(this.addForm.value);
+      myfollowApp.insert(this.addForm.value);
 
       this.resetForm();
       

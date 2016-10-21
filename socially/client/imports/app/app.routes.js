@@ -1,12 +1,11 @@
 "use strict";
-var router_1 = require('@angular/router');
-var first_component_1 = require('./first.component');
-var login_component_1 = require('./login.component');
-var product_list_component_1 = require('./product-list.component');
-var add_product_component_1 = require('./add-product.component');
-var registration_component_1 = require('./registration.component');
-var update_product_component_1 = require('./update-product.component');
-var routes = [
+var first_component_1 = require('../../first.component');
+var login_component_1 = require('../../login.component');
+var product_list_component_1 = require('../../product-list.component');
+var add_product_component_1 = require('../../add-product.component');
+var registration_component_1 = require('../../registration.component');
+var update_product_component_1 = require('../../update-product.component');
+exports.routes = [
     {
         path: '',
         component: first_component_1.FirstComponent
@@ -32,5 +31,4 @@ var routes = [
         component: update_product_component_1.UpdateProductComponent
     },
 ];
-
 //# sourceMappingURL=app.routes.js.map

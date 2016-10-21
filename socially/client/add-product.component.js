@@ -21,7 +21,7 @@ var AddProductComponent = (function () {
     };
     AddProductComponent.prototype.addProduct = function () {
         if (this.addForm.valid) {
-            myfollow_collection_1.myfollow.insert(this.addForm.value);
+            myfollow_collection_1.myfollowApp.insert(this.addForm.value);
             this.resetForm();
             this.router.navigate(['/Submit']);
         }
@@ -35,3 +35,4 @@ var AddProductComponent = (function () {
     return AddProductComponent;
 }());
 exports.AddProductComponent = AddProductComponent;
+//# sourceMappingURL=add-product.component.js.map

@@ -13,7 +13,7 @@ var ProductListComponent = (function () {
         this.isProductUnfollowed = [];
         Tracker.autorun(function () {
             _this.ngZone.run(function () {
-                _this.products = myfollow_collection_1.myfollow.find();
+                _this.products = myfollow_collection_1.myfollowApp.find();
                 _this.followedProduct = states_collection_1.state.find({ userId: Meteor.userId() }).fetch();
             });
         });
@@ -29,17 +29,17 @@ var ProductListComponent = (function () {
         this.router.navigate(['/Update', productId]);
     };
     ProductListComponent.prototype.removeProduct = function (productId) {
-        Meteor.call('deleteProductId', productId);
-        Meteor.call('removeProductId', productId);
+        Meteor.call('deleteProductsIdsss', productId);
+        Meteor.call('removeProductsIdsss', productId);
     };
     ProductListComponent.prototype.followProduct = function (productId, userId) {
         this.isProductFollowed[productId] = true;
         this.isProductUnfollowed[productId] = false;
-        Meteor.call('insertProductId', productId);
+        Meteor.call('insertProductsIdsss', productId);
         console.log(productId);
     };
     ProductListComponent.prototype.unFollowProduct = function (productId) {
-        Meteor.call('removeProductId', productId);
+        Meteor.call('removeProductsIdsss', productId);
         this.isProductUnfollowed[productId] = true;
         this.isProductFollowed[productId] = false;
         console.log(productId);
@@ -53,3 +53,4 @@ var ProductListComponent = (function () {
     return ProductListComponent;
 }());
 exports.ProductListComponent = ProductListComponent;
+//# sourceMappingURL=product-list.component.js.map

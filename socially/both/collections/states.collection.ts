@@ -1,6 +1,6 @@
 import {Mongo} from 'meteor/mongo';
  
-export const state = new Mongo.Collection('states');
+export const state = new Mongo.Collection('statesAppsss');
 
 state.allow({
     insert:loggedIn,

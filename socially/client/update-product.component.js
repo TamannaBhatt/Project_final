@@ -28,7 +28,7 @@ var UpdateProductComponent = (function () {
     };
     UpdateProductComponent.prototype.updateProduct = function () {
         if (this.updateForm.valid) {
-            myfollow_collection_1.myfollow.update(this.productId, {
+            myfollow_collection_1.myfollowApp.update(this.productId, {
                 $set: { productName: this.updateForm.value.productName, productDescription: this.updateForm.value.productDescription }
             });
             this.resetForm();
@@ -44,3 +44,4 @@ var UpdateProductComponent = (function () {
     return UpdateProductComponent;
 }());
 exports.UpdateProductComponent = UpdateProductComponent;
+//# sourceMappingURL=update-product.component.js.map

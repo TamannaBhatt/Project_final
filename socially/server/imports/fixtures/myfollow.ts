@@ -1,22 +1,22 @@
-import { myfollow } from '../../../both/collections/myfollow.collection';
+import { myfollowApp } from '../../../both/collections/myfollow.collection';
  
 export function loadMyfollow() {
-  if (myfollow.find().count() === 0) {
+  if (myfollowApp.find().count() === 0) {
     const myfollows = [
     
     ];
  
-    myfollows.forEach((product) => myfollow.insert(product));
+    myfollows.forEach((product) => myfollowApp.insert(product));
   }
 }
 Meteor.methods({
 
-  'deleteProductId': function(productId){
-    myfollow.remove({ _id: productId});
+  'deleteProductsIdssss': function(productId){
+    myfollowApp.remove({ _id: productId});
    },
-   'getproduct':function(productName,productDescription){
-     myfollow.find({productName:productName});
-      myfollow.find({productDescription:productDescription});
+   'get_productssss':function(productName,productDescription){
+     myfollowApp.find({productName:productName});
+      myfollowApp.find({productDescription:productDescription});
     
    }
 });

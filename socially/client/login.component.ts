@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
-import {  ROUTER_DIRECTIVES, Router} from '@angular/router';
+//import {  ROUTER_DIRECTIVES, Router} from '@angular/router';
+//import {Routes, RouterModule} from '@angular/router';
 import template from './login.component.html';
 import {User} from './user.model';
 @Component({
@@ -9,7 +10,7 @@ import {User} from './user.model';
 export class LoginComponent {
     user: any;
 
-    constructor(private router: Router) {
+    constructor() {
         this.user = new User();
     }
 

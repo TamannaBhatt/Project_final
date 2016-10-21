@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ROUTER_DIRECTIVES, Router} from '@angular/router';
+import {Router} from '@angular/router';
 import template from './first.component.html';
 //import { LoginButtons } from 'angular2-meteor-accounts-ui';
 

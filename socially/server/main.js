@@ -5,3 +5,4 @@ require('./imports/fixtures/states');
 meteor_1.Meteor.startup(function () {
     myfollow_1.loadMyfollow();
 });
+//# sourceMappingURL=main.js.map

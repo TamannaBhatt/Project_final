@@ -1,8 +1,8 @@
 import { Component, NgZone, OnInit} from '@angular/core';
 import {AddProductComponent} from'./add-product.component';
-import {  ROUTER_DIRECTIVES, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import template from './product-list.component.html';
-import { myfollow } from '../both/collections/myfollow.collection';
+import { myfollowApp } from '../both/collections/myfollow.collection';
 import { state } from '../both/collections/states.collection';
  
 @Component({
@@ -22,7 +22,7 @@ export class ProductListComponent implements OnInit {
   constructor(private router: Router, private ngZone: NgZone) {
     Tracker.autorun(() => {
      this.ngZone.run(() => {
-     this.products = myfollow.find();
+     this.products = myfollowApp.find();
       this.followedProduct = state.find({ userId: Meteor.userId() }).fetch();
       });
    });
@@ -43,19 +43,19 @@ updateProduct(productId: number){
   }
 
 removeProduct(productId:number){
-  Meteor.call('deleteProductId',productId);
-  Meteor.call('removeProductId',productId);
+  Meteor.call('deleteProductsIdssss',productId);
+  Meteor.call('removeProductsIdssss',productId);
   }
  
 followProduct(productId: number, userId: string) {
   this.isProductFollowed[productId]  = true;
   this.isProductUnfollowed[productId]  = false;
-  Meteor.call('insertProductId',productId);
+  Meteor.call('insertProductsIdssss',productId);
   console.log(productId);    
   }
 
  unFollowProduct(productId: number) { 
-   Meteor.call('removeProductId',productId);
+   Meteor.call('removeProductsIdssss',productId);
     this.isProductUnfollowed[productId]  = true;
     this.isProductFollowed[productId]  = false;
     console.log(productId);

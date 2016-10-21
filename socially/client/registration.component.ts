@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-import{  ROUTER_DIRECTIVES,Router} from '@angular/router';
+import{ Router} from '@angular/router';
 import template from './registration.component.html';
 import {User,Profile} from './user.model';
 @Component({

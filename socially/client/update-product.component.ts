@@ -1,8 +1,8 @@
 import { Component, OnInit} from '@angular/core';
-import { REACTIVE_FORM_DIRECTIVES, FormGroup, FormBuilder, Validators  } from '@angular/forms';
-import {  ROUTER_DIRECTIVES, Router, ActivatedRoute } from '@angular/router';
+import { FormGroup, FormBuilder, Validators  } from '@angular/forms';
+import { Router, ActivatedRoute } from '@angular/router';
 import template from './update-product.component.html';
-import { myfollow } from '../both/collections/myfollow.collection';
+import { myfollowApp } from '../both/collections/myfollow.collection';
 import {Product} from './product.model';
 
 @Component({
@@ -37,7 +37,7 @@ export class UpdateProductComponent implements OnInit {
 
   updateProduct() {
     if (this.updateForm.valid) {
-      myfollow.update(this.productId, {
+      myfollowApp.update(this.productId, {
         $set: { productName: this.updateForm.value.productName, productDescription: this.updateForm.value.productDescription }
       });
       this.resetForm();

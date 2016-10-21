@@ -28,3 +28,4 @@ var RegistrationComponent = (function () {
     return RegistrationComponent;
 }());
 exports.RegistrationComponent = RegistrationComponent;
+//# sourceMappingURL=registration.component.js.map

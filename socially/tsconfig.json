@@ -7,11 +7,10 @@
     "suppressImplicitAnyIndexErrors": true,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
-    "sourceMap": false,
+    "sourceMap": true,
     "declaration": true,
-    "noEmitHelpers": true,    
-    "lib": ["es2015", "dom"],
-    "skipLibCheck": true
+    "noEmitHelpers": true,        
+    "skipLibCheck": true 
   },
   "files": [    
     "server/imports/fixtures//myfollow.ts",
@@ -20,7 +19,7 @@
     "client/add-product.component.ts",
     "client/imports/app//app.component.ts",
     "client/imports/app//app.module.ts",
-    "client/app.routes.ts",
+    "client/imports/app//app.routes.ts",
     "client/first.component.ts",
     "client/init.test.ts",
     "client/login.component.ts",
@@ -37,5 +36,6 @@
     "examples",
     "node_modules",
     "atmosphere-packages"
+
   ]
 }
