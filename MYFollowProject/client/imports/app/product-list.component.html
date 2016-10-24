@@ -1,0 +1,30 @@
+
+    <h1> MyFollow</h1>
+
+    <h2>Product List
+    <button (click)="addProduct()">Add Product</button>
+    <button (click)="logOut()">Log Out</button>
+    </h2>
+    <table border=1>
+        <tbody>
+            <tr>
+                <th>Product Name</th>
+                <th>Product Description</th>
+            </tr>
+            <tr *ngFor="let product of products">
+                <td>{{product.productName}}</td>
+                <td>{{product.productDescription}}</td>
+                <td >
+                    <button [hidden]="isProductFollowed[product._id]" (click)="followProduct(product._id)">Follow</button>
+               
+                    <button  [hidden]="isProductUnfollowed[product._id]" (click)="unFollowProduct(product._id)" >Unfollow</button>
+                </td>
+                <td>
+                    <button (click)="updateProduct(product._id)">Update</button>
+                </td>
+                <td>
+                    <button (click)="removeProduct(product._id)"> Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
