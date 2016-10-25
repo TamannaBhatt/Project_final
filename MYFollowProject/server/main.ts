@@ -1,4 +1,11 @@
-import { Main } from './imports/server-main/main';
+//import { Main } from './imports/server-main/main';
+import {Meteor} from 'meteor/meteor';
+import{states} from './imports/fixtures/states';
+import {loadMyfollow} from './imports/fixtures/myfollow';
 
-const mainInstance = new Main();
-mainInstance.start();
+
+Meteor.startup(() => {
+  
+  loadMyfollow();
+ 
+});

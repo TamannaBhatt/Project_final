@@ -29,7 +29,7 @@ export class AddProductComponent implements OnInit
     if (this.addForm.valid) {
       myfollowApp.insert(this.addForm.value);
 
-      this.resetForm();
+     // this.resetForm();
       
       this.router.navigate(['/Submit']);
      

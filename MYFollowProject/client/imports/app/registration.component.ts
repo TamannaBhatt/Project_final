@@ -1,6 +1,7 @@
 import { Component} from '@angular/core';
 import{ Router} from '@angular/router';
 import template from './registration.component.html';
+import { AccountsModule } from 'angular2-meteor-accounts-ui';
 import {User,Profile} from './user';
 @Component({
      template,

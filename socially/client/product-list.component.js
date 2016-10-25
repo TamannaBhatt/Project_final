@@ -29,17 +29,17 @@ var ProductListComponent = (function () {
         this.router.navigate(['/Update', productId]);
     };
     ProductListComponent.prototype.removeProduct = function (productId) {
-        Meteor.call('deleteProductsIdsss', productId);
-        Meteor.call('removeProductsIdsss', productId);
+        Meteor.call('deleteProductsIdssss', productId);
+        Meteor.call('removeProductsIdssss', productId);
     };
     ProductListComponent.prototype.followProduct = function (productId, userId) {
         this.isProductFollowed[productId] = true;
         this.isProductUnfollowed[productId] = false;
-        Meteor.call('insertProductsIdsss', productId);
+        Meteor.call('insertProductsIdssss', productId);
         console.log(productId);
     };
     ProductListComponent.prototype.unFollowProduct = function (productId) {
-        Meteor.call('removeProductsIdsss', productId);
+        Meteor.call('removeProductsIdssss', productId);
         this.isProductUnfollowed[productId] = true;
         this.isProductFollowed[productId] = false;
         console.log(productId);

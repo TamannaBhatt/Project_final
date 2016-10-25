@@ -1,10 +1,10 @@
 "use strict";
 var states_collection_1 = require('../../../both/collections/states.collection');
 Meteor.methods({
-    'removeProductsIdsss': function (productId) {
+    'removeProductsIdssss': function (productId) {
         states_collection_1.state.remove({ productId: productId, userId: Meteor.userId() });
     },
-    'insertProductsIdsss': function (productId) {
+    'insertProductsIdssss': function (productId) {
         states_collection_1.state.insert({ productId: productId, userId: Meteor.userId() });
     },
 });

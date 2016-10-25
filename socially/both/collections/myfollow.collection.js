@@ -1,6 +1,6 @@
 "use strict";
 var mongo_1 = require('meteor/mongo');
-exports.myfollowApp = new mongo_1.Mongo.Collection('myfollowsAppsss');
+exports.myfollowApp = new mongo_1.Mongo.Collection('myfollowsAppssss');
 function loggedIn() {
     return !!Meteor.user();
 }

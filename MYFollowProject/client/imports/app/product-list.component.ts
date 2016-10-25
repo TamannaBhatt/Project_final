@@ -2,8 +2,10 @@ import { Component, NgZone, OnInit} from '@angular/core';
 //import {AddProductComponent} from'./add-product.component';
 import { Router } from '@angular/router';
 import template from './product-list.component.html';
+//import { Products } from '../../../both/collections/myfollow.collection';
+//import { Observable } from 'rxjs/Observable'
 import { myfollowApp } from '../../../both/collections/myfollow.collection';
-import { state } from '../../../both/collections/states.collection';
+import { states } from '../../../both/collections/states.collection';
  
 @Component({
   template,
@@ -12,18 +14,19 @@ import { state } from '../../../both/collections/states.collection';
 export class ProductListComponent implements OnInit {
   myfollows: Mongo.Cursor<any>;
   states:Mongo.Cursor<any>;
-  products: Mongo.Cursor<any>;
+  //products: Observable<any[]>;
+  products:any[] = [];
   isProductFollowed :any[] = [];
   isProductUnfollowed:any[] = [];
- // currentUserId: Mongo.Cursor<any>;
   followedProduct: any;
   isFollowed: boolean;
 
   constructor(private router: Router, private ngZone: NgZone) {
     Tracker.autorun(() => {
      this.ngZone.run(() => {
-     this.products = myfollowApp.find();
-      this.followedProduct = state.find({ userId: Meteor.userId() }).fetch();
+     this.products = myfollowApp.find({}).fetch();
+      //this.products = Products.find({}).zone();
+      this.followedProduct = states.find({ userId: Meteor.userId() }).fetch();
       });
    });
   }

@@ -1,0 +1,10 @@
+
+<form [formGroup]="updateForm" (ngSubmit)="updateProduct()">
+<label>Product Name </label>
+    <input type="text"  formControlName="productName" >
+<br>
+<br>
+<label>Description</label>
+    <input type="text" formControlName="productDescription">
+<button type="submit"> Update</button>
+</form>

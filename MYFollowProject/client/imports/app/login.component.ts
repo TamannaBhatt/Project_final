@@ -15,15 +15,15 @@ export class LoginComponent {
     }
 
     submit() {
-        // // Meteor.loginWithPassword(this.user.email, this.user.password, (error) => {
-        // //     if (error) {
-        // //         console.log(error);
-        // //     }
-        // //     else {
-        //         console.log("login");
-        //         location.href = "/Submit";
-        //     }
-        // });
-        location.href = "/Submit";
+        Meteor.loginWithPassword(this.user.email, this.user.password, (error) => {
+            if (error) {
+                console.log(error);
+            }
+            else {
+                console.log("login");
+                location.href = "/Submit";
+            }
+        });
+        //location.href = "/Submit";
     }
 }

@@ -1,6 +1,6 @@
 "use strict";
 var mongo_1 = require('meteor/mongo');
-exports.state = new mongo_1.Mongo.Collection('statesAppssss');
+exports.state = new mongo_1.Mongo.Collection('statesAppsss');
 exports.state.allow({
     insert: loggedIn,
     remove: loggedIn

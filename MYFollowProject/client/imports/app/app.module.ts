@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
+import { AccountsModule } from 'angular2-meteor-accounts-ui';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule }   from '@angular/router';
 import { routes } from './app.routes';
@@ -9,6 +10,7 @@ import {LoginComponent}  from './login.component';
 import {ProductListComponent} from'./product-list.component';
 import {AddProductComponent} from './add-product.component';
 import{FirstComponent}from'./first.component';
+import{UpdateProductComponent} from './update-product.component';
 @NgModule({
   // Components, Pipes, Directive
   declarations: [
@@ -17,7 +19,8 @@ import{FirstComponent}from'./first.component';
     FirstComponent,
     RegistrationComponent,
     ProductListComponent,
-    AddProductComponent
+    AddProductComponent,
+    UpdateProductComponent
   ],
   // Entry Components
   entryComponents: [
@@ -33,7 +36,8 @@ import{FirstComponent}from'./first.component';
     RouterModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    AccountsModule
 
   ],
   // Main Component

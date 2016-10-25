@@ -1,6 +1,15 @@
+// import { MongoObservable } from 'meteor-rxjs';
+// export const Products = new MongoObservable.Collection('products');
+
+
+
+
+
+
+
 import {Mongo} from 'meteor/mongo';
- 
-export const myfollowApp = new Mongo.Collection('myfollowsAppssss');
+import { Meteor } from 'meteor/meteor';
+export const myfollowApp = new Mongo.Collection('ProductList');
 
 function loggedIn() {
   return !!Meteor.user();

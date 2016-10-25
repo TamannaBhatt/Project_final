@@ -1,5 +1,6 @@
-import { myfollowApp } from '../../../../both/collections/myfollow.collection';
- 
+import { myfollowApp } from '../../../both/collections/myfollow.collection';
+
+import { Meteor } from 'meteor/meteor';
 export function loadMyfollow() {
   if (myfollowApp.find().count() === 0) {
     const myfollows = [

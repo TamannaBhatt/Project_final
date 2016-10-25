@@ -8,10 +8,10 @@ function loadMyfollow() {
 }
 exports.loadMyfollow = loadMyfollow;
 Meteor.methods({
-    'deleteProductsIdsss': function (productId) {
+    'deleteProductsIdssss': function (productId) {
         myfollow_collection_1.myfollowApp.remove({ _id: productId });
     },
-    'get_productsss': function (productName, productDescription) {
+    'get_productssss': function (productName, productDescription) {
         myfollow_collection_1.myfollowApp.find({ productName: productName });
         myfollow_collection_1.myfollowApp.find({ productDescription: productDescription });
     }

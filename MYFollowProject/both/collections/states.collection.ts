@@ -1,12 +1,17 @@
-import {Mongo} from 'meteor/mongo';
- 
-export const state = new Mongo.Collection('statesAppsss');
 
-state.allow({
-    insert:loggedIn,
-    remove:loggedIn
-})
+
+import {Mongo} from 'meteor/mongo';
+import { Meteor } from 'meteor/meteor';
+export const states = new Mongo.Collection('States');
 
 function loggedIn() {
-      return !!Meteor.user();
-    }
+  return !!Meteor.user();
+}
+ 
+states.allow({
+  insert: loggedIn,
+  update: loggedIn,
+  remove: loggedIn
+});
+
+
