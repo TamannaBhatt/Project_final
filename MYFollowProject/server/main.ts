@@ -7,5 +7,6 @@ import {loadMyfollow} from './imports/fixtures/myfollow';
 Meteor.startup(() => {
   
   loadMyfollow();
+  states();
  
 });

@@ -1,13 +1,15 @@
 export class User
 {
   _id: string;
+ username:string;
  email : string;
  password : string;
+ confirmPassword:string;
  profile: Profile;
 }
 export class Profile{
      name: string;
-     contact:string;
+     contactNumber:string;
      companyName:string;
      description:string;
      foundedIn:string;

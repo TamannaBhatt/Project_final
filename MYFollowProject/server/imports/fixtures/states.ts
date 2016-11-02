@@ -3,12 +3,12 @@ import { Meteor } from 'meteor/meteor';
 
 export function states(){
 Meteor.methods({
-    'removeProductsIdssss': function(productId){
+    'removeProductsId': function(productId){
       states.remove({ productId: productId, userId: Meteor.userId() });
      
     },
     
-    'insertProductsIdssss':function(productId){
+    'insertProductsId':function(productId){
       states.insert({ productId: productId, userId: Meteor.userId() });
      
     },

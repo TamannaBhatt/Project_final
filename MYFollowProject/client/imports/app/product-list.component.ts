@@ -46,21 +46,19 @@ updateProduct(productId: number){
   }
 
 removeProduct(productId:number){
-  Meteor.call('deleteProductsIdssss',productId);
-  Meteor.call('removeProductsIdssss',productId);
+  Meteor.call('deleteProductsId',productId);
+  Meteor.call('removeProductsId',productId);
   }
  
 followProduct(productId: number, userId: string) {
   this.isProductFollowed[productId]  = true;
   this.isProductUnfollowed[productId]  = false;
-  Meteor.call('insertProductsIdssss',productId);
-  console.log(productId);    
+  Meteor.call('insertProductsId',productId); 
   }
 
  unFollowProduct(productId: number) { 
-   Meteor.call('removeProductsIdssss',productId);
+   Meteor.call('removeProductsId',productId);
     this.isProductUnfollowed[productId]  = true;
     this.isProductFollowed[productId]  = false;
-    console.log(productId);
   }
 }

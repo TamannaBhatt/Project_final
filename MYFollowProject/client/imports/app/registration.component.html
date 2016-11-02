@@ -1,70 +1,100 @@
 <div class="container">
-    <h2>Registration</h2>
- <form>
-   <div class="form-group">
-   <label>Email</label>
-   <input type="email" name="Email" class="form-control" required [(ngModel)]="user.email">
-  </div>
-<br>
-
-  <div class="form-group">
-    <label>Password</label>
-    <input type="password" name="Password" class="form-control" required  [(ngModel)]="user.password">
-  </div>
-  <br>
-
-  <div class="form-group">
-     <label>Company Name:</label>
-     <input type="text"  name="CompanyName" class="form-control" required [(ngModel)]="profile.name" >
-  </div>
+  <h1>Registration</h1>
+    <form #f="ngForm" novalidate  (ngSubmit)="submit()">
+      <div class="form-group">
+        <label for="">Username</label>
+         <input type="text" class="form-control" name="username" [(ngModel)]="user.username" 
+        required minlength="5" maxlength="15" #username="ngModel"/>
+            <small [hidden]="username.valid || (username.pristine && !f.submitted)" class="text-danger">
+        Username is required (minimum 5 characters).
+           </small>
+         </div>
+     <div class="form-group">
+        <label for="">Email</label>
+          <input type="email" class="form-control" name="email" [(ngModel)]="user.email" 
+        required  #email="ngModel" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$"/>
+            <small [hidden]="email.valid || (email.pristine && !f.submitted)" class="text-danger">
+             Email is required and format should be <i>abc@xyz.com</i>.
+           </small>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+          <input type="password" class="form-control" name="password" [(ngModel)]="user.password"
+             required validateEqual="confirmPassword" reverse="true" #password="ngModel"/>
+                <small [hidden]="password.valid || (password.pristine&& !f.submitted)" class="text-danger">
+                 Password is required
+               </small>
+       </div>
+      <div class="form-group">
+        <label for="">Retype password</label>
+          <input type="password" class="form-control" name="confirmPassword" [(ngModel)]="user.confirmPassword" 
+             required validateEqual="password" reverse="false" #confirmPassword="ngModel"/>
+            <small [hidden]="confirmPassword.valid || (confirmPassword.pristine && !f.submitted)" class="text-danger">
+               Password mismatch
+            </small>
+      </div>
+      <div class="form-group">
+       <label>Contact number:</label>
+        <input type="number" name="contactNmber"  class="form-control" [(ngModel)]="profile.contactNumber"
+          required minlength="10" maxlength="10" #contactNumber="ngModel"/>
+          <small [hidden]="contactNumber.valid || (contactNumber.pristine && !f.submitted)" class="text-danger"> invalid</small>
+        
+      </div>
+      <br>
+      <br>
+      <div class="form-group">
+         <label>Company Name:</label>
+          <input type="text"  name="companyName" class="form-control" required [(ngModel)]="profile.name"/>
+      </div>
   <br>
 
   <div class="form-group">
     <label>Description:</label>
-    <textarea name="Description" class="form-control" required [(ngModel)]="profile.description" ></textarea>
-    </div>
+     <textarea name="description" class="form-control" required [(ngModel)]="profile.description" ></textarea>
+  </div>
     <br>
 
-         <div class="form-group">
-      <label>Date OF Joining:</label>
-        <input type="date" [(ngModel)]="profile.dateOfJoining" [ngModelOptions]="{standalone: true}">
-           </div>
-           <br>
+   <div class="form-group">
+     <label>Founded In:</label>
+       <input type="date"  name="date" class="form-control" required [(ngModel)]="profile.foundedIn"/>
+  </div>
+      <br>
 
-            <div class="form-group">
-      <label>Founded In:</label>
-       <input type="date" [(ngModel)]="profile.foundedIn" [ngModelOptions]="{standalone: true}">
-            </div>
-            <br>
-
-             <div class="form-group">
-      <label>Address</label>
+   <div class="form-group">
+     <label>Address</label>
       <br>
-      <label>Street 1:</label>
-       <input type="text" [(ngModel)]="profile.street1" [ngModelOptions]="{standalone: true}">
+     <label>Street 1:</label>
+       <input type="text" name="street1" class="form-control" required [(ngModel)]="profile.street1"/>
       <br>
       <br>
-      <label>Street 2:</label>
-        <input type="text" [(ngModel)]="profile.street2" [ngModelOptions]="{standalone: true}">
+     <label>Street 2:</label>
+       <input type="text" name="street2" class="form-control" [(ngModel)]="profile.street2"/>
       <br>
       <br>
-             </div>
-             <br>
+      </div>
+       <br>
              
-              <div class="form-group">
-      <label>State:</label>
-       <input type="text" [(ngModel)]="profile.state" [ngModelOptions]="{standalone: true}">
+      <div class="form-group">
+       <label>State:</label>
+          <input type="text"  name="state" class="form-control" required [(ngModel)]="profile.state" >
       <br>
       <br>
-              </div>
-               <div class="form-group">
-      <label>Country:</label>
-        <input type="text" [(ngModel)]="profile.country" [ngModelOptions]="{standalone: true}">
+      </div>
+
+      <div class="form-group">
+        <label>Country:</label>
+          <input type="text" name="country" class="form-control" required [(ngModel)]="profile.country" >
+      <br>
+      <br>
+      </div>
+
+    <div class="form-group">
+      <label>Pin Code:</label>
+        <input type="number" name="pinCode" class="form-control" required [(ngModel)]="profile.pinCode">
       <br>
       <br>
     </div>
-                
-      <button (click)="submit()"> Submit</button>
-</form>
-</div>
+    <button type="submit" [disabled]="!f.valid">Submit</button>
   
+  </form>
+</div>

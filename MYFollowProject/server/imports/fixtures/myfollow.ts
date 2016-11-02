@@ -12,10 +12,10 @@ export function loadMyfollow() {
 }
 Meteor.methods({
 
-  'deleteProductsIdssss': function(productId){
+  'deleteProductsId': function(productId){
     myfollowApp.remove({ _id: productId});
    },
-   'get_productssss':function(productName,productDescription){
+   'get_product':function(productName,productDescription){
      myfollowApp.find({productName:productName});
       myfollowApp.find({productDescription:productDescription});
     

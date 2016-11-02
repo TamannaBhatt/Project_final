@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { EqualValidator } from './equal-validator.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AccountsModule } from 'angular2-meteor-accounts-ui';
@@ -20,7 +21,8 @@ import{UpdateProductComponent} from './update-product.component';
     RegistrationComponent,
     ProductListComponent,
     AddProductComponent,
-    UpdateProductComponent
+    UpdateProductComponent,
+    EqualValidator
   ],
   // Entry Components
   entryComponents: [
